@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Contact";
 }
+@model ContactPost
 
 <!-- Breadcrumb Start -->
 <div class="breadcrumb-area ptb-50">
@@ -30,35 +31,36 @@
         <div class="row">
             <div class="col-12">
                 <h3 class="mb-5">Contact Us</h3>
-                <p class="text-capitalize mb-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
         </div>
-
-        <form id="contact-form" class="contact-form" action="https://htmldemo.net/bigon/bigon/mail.php" method="post">
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["Message"]
+            </div>
+        }
+        
+        <form id="contact-form" class="contact-form" method="post">
             <div class="address-wrapper row">
                 <div class="col-md-12">
                     <div class="address-fname">
-                        <input type="text" name="name" placeholder="Name">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="address-email">
-                        <input type="email" name="email" placeholder="Email">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="address-web">
-                        <input type="text" name="website" placeholder="Website">
+                        <input asp-for="Name" placeholder="Name">
                     </div>
                 </div>
                 <div class="col-12">
+                    <div class="address-email">
+                        <input asp-for="Email" placeholder="Email">
+                    </div>
+                </div>
+                
+                <div class="col-12">
                     <div class="address-subject">
-                        <input type="text" name="subject" placeholder="Subject">
+                        <input asp-for="Subject" placeholder="Subject">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="address-textarea">
-                        <textarea name="message" placeholder="Write your message"></textarea>
+                        <textarea asp-for="Message" placeholder="Write your message"></textarea>
                     </div>
                 </div>
             </div>

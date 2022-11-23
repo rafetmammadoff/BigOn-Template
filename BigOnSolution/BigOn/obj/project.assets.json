@@ -7465,11 +7465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\BigOn-Template\\BigOnSolution\\BigOn\\BigOn.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\OTHER\\BackEnd Repos\\BigOn-Template\\BigOnSolution\\BigOn\\BigOn.csproj",
       "projectName": "BigOn",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\BigOn-Template\\BigOnSolution\\BigOn\\BigOn.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\OTHER\\BackEnd Repos\\BigOn-Template\\BigOnSolution\\BigOn\\BigOn.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\BigOn-Template\\BigOnSolution\\BigOn\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\OTHER\\BackEnd Repos\\BigOn-Template\\BigOnSolution\\BigOn\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7542,7 +7542,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
