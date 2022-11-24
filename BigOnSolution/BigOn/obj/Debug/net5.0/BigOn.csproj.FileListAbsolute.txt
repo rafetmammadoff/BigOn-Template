@@ -291,3 +291,7 @@ C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\o
 C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\BigOn.pdb
 C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\BigOn.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\ref\BigOn.dll
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
