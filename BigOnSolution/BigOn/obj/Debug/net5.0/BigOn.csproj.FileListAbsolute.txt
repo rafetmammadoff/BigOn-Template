@@ -297,3 +297,10 @@ C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\o
 C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
 C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Index.cshtml.g.cs
 C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Create.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Edit.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Details.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\bin\Debug\net5.0\libman.json
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Colors\Create.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Colors\Details.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Colors\Edit.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Colors\Index.cshtml.g.cs

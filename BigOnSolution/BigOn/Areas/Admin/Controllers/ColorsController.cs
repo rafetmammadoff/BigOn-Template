@@ -6,18 +6,19 @@ using System.Linq;
 
 namespace BigOn.Areas.Admin.Controllers
 {
+    
     [Area("Admin")]
-    public class BrandsController : Controller
+    public class ColorsController : Controller
     {
         private readonly BigOnDbContext _db;
 
-        public BrandsController(BigOnDbContext db)
+        public ColorsController(BigOnDbContext db)
         {
             this._db = db;
         }
         public IActionResult Index()
         {
-            var data = _db.Brands.Where(b => b.DeletedDate == null).ToList(); ;
+            var data = _db.Colors.Where(b => b.DeletedDate == null).ToList(); ;
             return View(data);
         }
 
@@ -27,13 +28,13 @@ namespace BigOn.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([Bind("Name")]Brand model)
+        public IActionResult Create([Bind("Name")] ProductColor model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-            _db.Brands.Add(model);
+            _db.Colors.Add(model);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -41,24 +42,24 @@ namespace BigOn.Areas.Admin.Controllers
 
         public IActionResult Edit(int id)
         {
-            var entity = _db.Brands.FirstOrDefault(b => b.Id == id && b.DeletedDate==null);
-                if (entity == null)
-                {
-                    return NotFound();
-                }
-                return View(entity);    
+            var entity = _db.Colors.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
+            if (entity == null)
+            {
+                return NotFound();
+            }
+            return View(entity);
         }
         [HttpPost]
-        public IActionResult Edit([Bind("Id,Name")] Brand model)
+        public IActionResult Edit([Bind("Id,Name")] ProductColor model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            var entity = _db.Brands.FirstOrDefault(b => b.Id == model.Id && b.DeletedDate == null);
+            var entity = _db.Colors.FirstOrDefault(b => b.Id == model.Id && b.DeletedDate == null);
 
-            if (entity==null)
+            if (entity == null)
             {
                 return NotFound();
             }
@@ -69,7 +70,7 @@ namespace BigOn.Areas.Admin.Controllers
 
         public IActionResult Details(int id)
         {
-            var entity = _db.Brands.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
+            var entity = _db.Colors.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
             if (entity == null)
             {
                 return NotFound();
@@ -80,9 +81,9 @@ namespace BigOn.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Remove(int id)
         {
-            
-           
-            var entity = _db.Brands.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
+
+
+            var entity = _db.Colors.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
             if (entity == null)
             {
                 var response = new
@@ -97,8 +98,8 @@ namespace BigOn.Areas.Admin.Controllers
             _db.SaveChanges();
             return Json(new
             {
-                error=false,
-                message="Silindi"
+                error = false,
+                message = "Silindi"
             });
         }
     }
