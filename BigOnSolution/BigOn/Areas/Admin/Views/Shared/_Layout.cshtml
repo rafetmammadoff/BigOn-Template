@@ -31,6 +31,7 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="~/admin/css/style.css">
     <link rel="stylesheet" type="text/css" href="~/admin/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -350,13 +351,17 @@
                             <div class="pcoded-navigatio-lavel">Navigation</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="pcoded-hasmenu active pcoded-trigger">
-                                    <a href="javascript:void(0)">
+                                    <a asp-controller="Home" asp-action="Index">
                                         <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                        <span class="pcoded-mtext">Ana sehife</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"></span>
                                         <span class="pcoded-mtext">Mehsullar</span>
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class="active">
-                                            <a href="default/index.html">
+                                            <a asp-controller="Brands" asp-action="Index">
                                                 <span class="pcoded-mtext">Markalar</span>
                                             </a>
                                         </li>
