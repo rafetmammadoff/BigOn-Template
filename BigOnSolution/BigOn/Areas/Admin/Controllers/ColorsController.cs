@@ -28,7 +28,7 @@ namespace BigOn.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([Bind("Name")] ProductColor model)
+        public IActionResult Create([Bind("Name","HexCode")] ProductColor model)
         {
             if (!ModelState.IsValid)
             {

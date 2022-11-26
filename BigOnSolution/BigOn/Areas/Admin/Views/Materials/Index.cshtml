@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProductColor>
+﻿@model IEnumerable<ProductMaterial>
 @{
     ViewData["Title"] = "Index";
 }
@@ -50,7 +50,6 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Hex</th>
                             <th class="operation">
                                 <a asp-action="create" class="btn btn-success">
                                     <i class="fas fa-plus nm"></i>
@@ -63,21 +62,19 @@
                         @foreach (var item in Model)
                         {
                                 <tr>
-
-                                <td>@item.Name</td>
-                                <td>@item.HexCode</td>
-
-                                    <td class="operation">
-                                        <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">
-                                            <i class="fas fa-pencil nm"></i>
-                                        </a>
-                                        <a asp-action="details" asp-route-id="@item.Id" class="btn btn-secondary">
-                                            <i class="fas fa-eye nm"></i>
-                                        </a>
-                                        <a asp-action="delete" onclick="removeEntity(event,@item.Id,'@item.Name')" class="btn btn-danger">
-                                            <i class="fas fa-trash nm"></i>
-                                        </a>
-                                    </td>
+                                    
+                                    <td>@item.Name</td>
+                                <td class="operation">
+                                    <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">
+                                        <i class="fas fa-pencil nm"></i>
+                                    </a>
+                                    <a asp-action="details" asp-route-id="@item.Id" class="btn btn-secondary">
+                                        <i class="fas fa-eye nm"></i>
+                                    </a>
+                                    <a asp-action="delete" onclick="removeEntity(event,@item.Id,'@item.Name')" class="btn btn-danger">
+                                        <i class="fas fa-trash nm"></i>
+                                    </a>
+                                </td>
                                 </tr>
                         }
                     </tbody>

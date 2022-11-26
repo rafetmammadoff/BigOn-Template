@@ -1,6 +1,6 @@
-﻿@model ProductColor
+﻿@model ProductMaterial
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Create";
 }
 
 <!-- Page-header start -->
@@ -50,18 +50,17 @@
                 <form method="post">
                     <div class="form-group row">
                         <label asp-for="Name" class="col-sm-2 col-form-label">
-
+                            
                         </label>
                         <div class="col-sm-10">
-                            <p class="form-control">@Model.Name</p>
+                            <input asp-for="Name" type="text" class="form-control">
                             <span asp-validation-for="Name" class="text-danger"></span>
-                            <p class="form-control">@Model.HexCode</p>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-12 d-flex justify-content-end">
-                            <a class="btn btn-warning mr-2" asp-action="edit" asp-route-id="@Model.Id">Edit</a>
+                            <button class="btn btn-success mr-2">Save</button>
                             <a class="btn btn-info" asp-action="Index">Back</a>
                         </div>
                     </div>
@@ -72,5 +71,4 @@
     <!-- Basic table card end -->
 
 </div>
-
 
