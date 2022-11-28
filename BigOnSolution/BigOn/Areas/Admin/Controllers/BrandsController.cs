@@ -17,7 +17,7 @@ namespace BigOn.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            var data = _db.Brands.Where(b => b.DeletedDate == null).ToList(); ;
+            var data = _db.Brands.Where(b => b.DeletedDate == null).ToList();
             return View(data);
         }
 
@@ -95,11 +95,9 @@ namespace BigOn.Areas.Admin.Controllers
 
             entity.DeletedDate = DateTime.UtcNow.AddHours(4);
             _db.SaveChanges();
-            return Json(new
-            {
-                error=false,
-                message="Silindi"
-            });
+            var data = _db.Brands.Where(b => b.DeletedDate == null).ToList();
+
+            return PartialView("_ListBody",data);
         }
     }
 }

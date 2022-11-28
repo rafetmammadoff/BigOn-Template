@@ -58,25 +58,8 @@
                         </tr>
                     </thead>
                     
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                                <tr>
-                                    
-                                    <td>@item.Name</td>
-                                <td class="operation">
-                                    <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">
-                                        <i class="fas fa-pencil nm"></i>
-                                    </a>
-                                    <a asp-action="details" asp-route-id="@item.Id" class="btn btn-secondary">
-                                        <i class="fas fa-eye nm"></i>
-                                    </a>
-                                    <a asp-action="delete" onclick="removeEntity(event,@item.Id,'@item.Name')" class="btn btn-danger">
-                                        <i class="fas fa-trash nm"></i>
-                                    </a>
-                                </td>
-                                </tr>
-                        }
+                    <tbody id="dynamic-body">
+                       <partial name="_ListBody" />
                     </tbody>
                 </table>
             </div>
@@ -105,9 +88,9 @@
                             url:`@Url.Action("Remove")/${id}`,
                             type:"POST",
                             success:function(response){
-                                if(response.error==false){
-                                    toastr.success(response.message,"Ugurlu")
-                                    window.location.reload()
+
+                                if (/[<>]+/g.test(response)){
+                                    $("#dynamic-body").html(response)
                                 }
                                 else{
                                     toastr.error(response.message, "Xeta")

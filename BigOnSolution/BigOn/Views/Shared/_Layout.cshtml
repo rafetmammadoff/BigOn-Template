@@ -766,6 +766,29 @@
     <script src="~/assets/js/plugins.js"></script>
     <!-- main js -->
     <script src="~/assets/js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#frmNewsletter").submit(function(e){
+                e.preventDefault();
+                let fd=new FormData(e.currentTarget);
+                $.ajax({
+                    url: '@Url.Action("Subscribe","Home")',
+                    type:"post",
+                    data:fd,
+                    processData:false,
+                    contentType:false,
+                    success:function(response){
+                        console.log(response)
+                    },
+                    error:function(response){
+                        console.log(response)
+                    }
+                })
+            });
+        });
+    </script>
 </body>
 
 

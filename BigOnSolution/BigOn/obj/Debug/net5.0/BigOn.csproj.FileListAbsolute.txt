@@ -308,3 +308,16 @@ C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\o
 C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Materials\Details.cshtml.g.cs
 C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Materials\Edit.cshtml.g.cs
 C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Materials\Index.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Types\Create.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Types\Details.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Types\Edit.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Types\Index.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Preloader.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Sidebar.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\_ListBody.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sizes\Create.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sizes\Details.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sizes\Edit.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sizes\Index.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sizes\_ListBody.cshtml.g.cs
+C:\Users\LENOVO\Desktop\OTHER\BackEnd Repos\BigOn-Template\BigOnSolution\BigOn\obj\Debug\net5.0\Razor\Views\Shared\_NewsLetter.cshtml.g.cs

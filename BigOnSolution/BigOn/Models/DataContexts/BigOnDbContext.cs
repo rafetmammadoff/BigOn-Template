@@ -10,6 +10,7 @@ namespace BigOn.Models.DataContexts
 
         }
 
+        public DbSet<Subscribe> Subscribers { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<ProductColor> Colors { get; set; }
         public DbSet<ProductSize> Sizes { get; set; }
