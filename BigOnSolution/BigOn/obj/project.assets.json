@@ -7465,11 +7465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\OTHER\\BackEnd Repos\\BigOn-Template\\BigOnSolution\\BigOn\\BigOn.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\OTHER\\Mvc-Repo's\\BigOn-Template\\BigOnSolution\\BigOn\\BigOn.csproj",
       "projectName": "BigOn",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\OTHER\\BackEnd Repos\\BigOn-Template\\BigOnSolution\\BigOn\\BigOn.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\OTHER\\Mvc-Repo's\\BigOn-Template\\BigOnSolution\\BigOn\\BigOn.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\OTHER\\BackEnd Repos\\BigOn-Template\\BigOnSolution\\BigOn\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\OTHER\\Mvc-Repo's\\BigOn-Template\\BigOnSolution\\BigOn\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
