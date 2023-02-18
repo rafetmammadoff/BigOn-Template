@@ -1,4 +1,4 @@
-using BigOn.Models.Entities;
+using BigOn.Domain.Models.Entities;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using System.Net.Mail;

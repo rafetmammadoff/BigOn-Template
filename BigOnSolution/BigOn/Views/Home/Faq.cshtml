@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Faq>
+@{
+    ViewData["Title"] = "Faq";
+}
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+
+<div class="container">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        @foreach (var item in Model)
+        {
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-@item.Id" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    @item.Question
+                </button>
+            </h2>
+            <div id="flush-collapse-@item.Id" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">@Html.Raw(item.Answer) <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+

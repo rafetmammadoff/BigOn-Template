@@ -4855,3 +4855,24 @@ legend {
 	font-size: 13px;
 	margin-bottom: 5px;
 }
+
+
+.blog-img > a > img {
+    width: 100%;
+    min-height: 205px;
+    max-height: 205px;
+    object-fit: fill;
+}
+
+.blog-img > img {
+    width: 100%;
+    min-height: 205px;
+    max-height: 500px;
+    object-fit: fill;
+}
+
+.blog-title {
+    height: 70px;
+    overflow: hidden;
+    max-height: 70px;
+}

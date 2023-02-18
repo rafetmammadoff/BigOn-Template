@@ -18,7 +18,7 @@
                         </a>
                     </li>
                     <li class="">
-                        <a href="default/dashboard-crm.html">
+                        <a asp-controller="Categories" asp-action="Index">
                             <span class="pcoded-mtext">Kateqoriyalar</span>
                         </a>
                     </li>
@@ -44,6 +44,35 @@
                         <a asp-controller="types" asp-action="Index">
                             <span class="pcoded-mtext">Tipler</span>
                             <span class="pcoded-badge label label-info ">NEW</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a asp-controller="Faqs" asp-action="Index">
+                            <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                            <span class="pcoded-mtext">Faqs</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"></span>
+                    <span class="pcoded-mtext">Paylasimlar</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li>
+                        <a asp-controller="BlogPosts" asp-action="Index">
+                            <span class="pcoded-mtext">Hamisi</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="default/dashboard-crm.html">
+                            <span class="pcoded-mtext">Derc edilmis paylasimlar</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a asp-controller="Colors" asp-action="Index">
+                            <span class="pcoded-mtext">Silinmis</span>
                         </a>
                     </li>
 

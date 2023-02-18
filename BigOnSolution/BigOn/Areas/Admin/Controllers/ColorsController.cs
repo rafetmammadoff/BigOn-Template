@@ -1,8 +1,12 @@
-﻿using BigOn.Models.DataContexts;
-using BigOn.Models.Entities;
+﻿using BigOn.Domain.Business.BrandModule;
+using BigOn.Domain.Business.ColorModule;
+using BigOn.Domain.Models.DataContexts;
+using BigOn.Domain.Models.Entities;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace BigOn.Areas.Admin.Controllers
 {
@@ -11,15 +15,17 @@ namespace BigOn.Areas.Admin.Controllers
     public class ColorsController : Controller
     {
         private readonly BigOnDbContext _db;
+        private readonly IMediator mediator;
 
-        public ColorsController(BigOnDbContext db)
+        public ColorsController(BigOnDbContext db,IMediator mediator)
         {
             this._db = db;
+            this.mediator = mediator;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index(ColorsAllQuery query)
         {
-            var data = _db.Colors.Where(b => b.DeletedDate == null).ToList(); ;
-            return View(data);
+            var response=await mediator.Send(query);
+            return View(response);
         }
 
         public IActionResult Create()
@@ -28,21 +34,21 @@ namespace BigOn.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([Bind("Name","HexCode")] ProductColor model)
+        public async Task<IActionResult> Create(ColorCreateCommand query)
         {
-            if (!ModelState.IsValid)
+            var resp= await mediator.Send(query);
+
+            if (resp==null)
             {
-                return View(model);
+                return View(query);
             }
-            _db.Colors.Add(model);
-            _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(ColorSingleQuery query)
         {
-            var entity = _db.Colors.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
+            var entity = await mediator.Send(query);
             if (entity == null)
             {
                 return NotFound();
@@ -50,57 +56,39 @@ namespace BigOn.Areas.Admin.Controllers
             return View(entity);
         }
         [HttpPost]
-        public IActionResult Edit([Bind("Id,Name")] ProductColor model)
+        public async Task<IActionResult> Edit(ColorEditCommand query)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
 
-            var entity = _db.Colors.FirstOrDefault(b => b.Id == model.Id && b.DeletedDate == null);
-
+            var entity = await mediator.Send(query);
             if (entity == null)
             {
                 return NotFound();
             }
-            entity.Name = model.Name;
-            _db.SaveChanges();
             return RedirectToAction("Index");
+
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(ColorSingleQuery query)
         {
-            var entity = _db.Colors.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
-            if (entity == null)
+            var resp=await mediator.Send(query);  
+            if (resp == null)
             {
                 return NotFound();
             }
-            return View(entity);
+            return View(resp);
         }
 
         [HttpPost]
-        public IActionResult Remove(int id)
+        public async Task<IActionResult> Remove(ColorRemoveCommand query)
         {
-
-
-            var entity = _db.Colors.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
-            if (entity == null)
+            var resp = await mediator.Send(query);
+            if (resp.Error)
             {
-                var response = new
-                {
-                    error = true,
-                    message = "Qeyd tapilmadi"
-                };
-                return Json(response);
+                return Json(resp);
             }
+            var data = await mediator.Send(new ColorsAllQuery());
+            return PartialView("_ColorListBody", data);
 
-            entity.DeletedDate = DateTime.UtcNow.AddHours(4);
-            _db.SaveChanges();
-            return Json(new
-            {
-                error = false,
-                message = "Silindi"
-            });
         }
     }
 }

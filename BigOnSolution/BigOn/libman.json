@@ -9,6 +9,18 @@
     {
       "library": "toastr.js@2.1.4",
       "destination": "wwwroot/libs/toastr.js/"
+    },
+    {
+      "library": "ckeditor5@36.0.1",
+      "destination": "wwwroot/libs/ckeditor5/"
+    },
+    {
+      "library": "select2@4.0.13",
+      "destination": "wwwroot/libs/select2/"
+    },
+    {
+      "library": "jquery-treegrid@0.2.0",
+      "destination": "wwwroot/libs/jquery-treegrid/"
     }
   ]
 }

@@ -1,0 +1,14 @@
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\bin\Debug\net6.0\BigOn.Domain.deps.json
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\bin\Debug\net6.0\BigOn.Domain.runtimeconfig.json
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\bin\Debug\net6.0\BigOn.Domain.dll
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\bin\Debug\net6.0\BigOn.Domain.pdb
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\BigOn.Domain.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\BigOn.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\BigOn.Domain.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\BigOn.Domain.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\BigOn.Domain.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\BigOn.Domain.dll
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\refint\BigOn.Domain.dll
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\BigOn.Domain.pdb
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\BigOn.Domain.genruntimeconfig.cache
+C:\Users\LENOVO\Desktop\Other's\Mvc-Repo's\BigOn-Template\BigOnSolution\BigOn.Domain\obj\Debug\net6.0\ref\BigOn.Domain.dll

@@ -1,10 +1,16 @@
-using BigOn.Models.DataContexts;
+using BigOn.Domain.AppCode.Services;
+using BigOn.Domain.Models.DataContexts;
+using BigOn.WebUI.AppCode.Services;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Nest;
+using System;
+using System.Linq;
 
 namespace BigOn
 {
@@ -29,6 +35,20 @@ namespace BigOn
             {
                 cfg.UseSqlServer(configuration.GetConnectionString("cString"));
             });
+            services.Configure<CryiptoServiceOptions>(cfg =>
+            {
+                configuration.GetSection("cryptography").Bind(cfg);
+            });
+            services.AddSingleton<CryiptoService>();
+
+            services.Configure<EmailServiceOptions>(cfg =>
+            {
+                configuration.GetSection("emailAccount").Bind(cfg);
+            });
+            services.AddSingleton<EmailService>();
+            var assemblies=AppDomain.CurrentDomain.GetAssemblies().Where(a=> a.FullName.StartsWith("Big")).ToArray();
+            services.AddMediatR(assemblies);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

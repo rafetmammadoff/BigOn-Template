@@ -83,23 +83,46 @@
                 dangerMode: true,
             })
                 .then((willDelete) => {
-                    if (willDelete) {
-                        $.ajax({
-                            url:`@Url.Action("Remove")/${id}`,
-                            type:"POST",
-                            success:function(response){
+                    //if (willDelete) {
+                    //    $.ajax({
+                    //        url:`@Url.Action("Remove")/${id}`,
+                    //        type:"POST",
+                    //        success:function(response){
 
-                                if (/[<>]+/g.test(response)){
-                                    $("#dynamic-body").html(response)
+                    //            if (/[<>]+/g.test(response)){
+                    //                $("#dynamic-body").html(response)
+                    //            }
+                    //            else{
+                    //                toastr.error(response.message, "Xeta")
+                    //            }
+                    //        },
+                    //        error:function(response){
+                    //            toastr.error("Sistem xetasi", "Xeta")
+                    //        }
+                    //    })
+                    //}
+                    if (willDelete) {
+
+                        $.ajax({
+                            url: `@Url.Action("Remove")/${id}`,
+                            type: "POST",
+                            success: function (response, statusText, xhr) {
+
+                                if (/[<>]+/g.test(xhr.responseText) == true
+                                    || xhr.responseText.replace(/(\r|\n|\r\n|\s)/g, '').length == 0) {
+                                    $('#dynamic-body').html(xhr.responseText);
                                 }
-                                else{
-                                    toastr.error(response.message, "Xeta")
+                                else {
+                                    toastr.error(response.message, "Xəta!");
                                 }
                             },
-                            error:function(response){
-                                toastr.error("Sistem xetasi", "Xeta")
+                            error: function (response) {
+                                toastr.error('Sistem xətası.Biraz sonra yenidən yoxlayın', "Xəta!")
+                                console.warn(response);
                             }
-                        })
+
+                        });
+
                     }
                     else{
 

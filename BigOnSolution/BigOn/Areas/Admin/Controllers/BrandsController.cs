@@ -1,24 +1,28 @@
-﻿using BigOn.Models.DataContexts;
-using BigOn.Models.Entities;
+﻿using BigOn.Domain.Business.BrandModule;
+using BigOn.Domain.Models.DataContexts;
+using BigOn.Domain.Models.Entities;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace BigOn.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class BrandsController : Controller
     {
-        private readonly BigOnDbContext _db;
+        private readonly IMediator mediator;
 
-        public BrandsController(BigOnDbContext db)
+        public BrandsController(IMediator mediator)
         {
-            this._db = db;
+            this.mediator = mediator;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index(BrandsAllQuery query)
         {
-            var data = _db.Brands.Where(b => b.DeletedDate == null).ToList();
-            return View(data);
+            var response=await mediator.Send(query);
+            return View(response);
         }
 
         public IActionResult Create()
@@ -27,75 +31,59 @@ namespace BigOn.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([Bind("Name")]Brand model)
+        public async Task<IActionResult> Create(BrandCreateCommand brandCreate)
         {
-            if (!ModelState.IsValid)
+            var response = await mediator.Send(brandCreate);
+            if (response==null)
             {
-                return View(model);
+                return View(brandCreate);
             }
-            _db.Brands.Add(model);
-            _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(BrandSingleQuery query)
         {
-            var entity = _db.Brands.FirstOrDefault(b => b.Id == id && b.DeletedDate==null);
-                if (entity == null)
+                var response= await mediator.Send(query);
+                if (response == null)
                 {
                     return NotFound();
                 }
-                return View(entity);    
+                return View(response);    
         }
         [HttpPost]
-        public IActionResult Edit([Bind("Id,Name")] Brand model)
+        public async Task<IActionResult> Edit(BrandEditCommand query)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            var response = await mediator.Send(query);
 
-            var entity = _db.Brands.FirstOrDefault(b => b.Id == model.Id && b.DeletedDate == null);
-
-            if (entity==null)
+            if (response==null)
             {
                 return NotFound();
             }
-            entity.Name = model.Name;
-            _db.SaveChanges();
+
             return RedirectToAction("Index");
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(BrandSingleQuery query)
         {
-            var entity = _db.Brands.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
-            if (entity == null)
+            var response = await mediator.Send(query);
+            if (response == null)
             {
                 return NotFound();
             }
-            return View(entity);
+            return View(response);
         }
 
         [HttpPost]
-        public IActionResult Remove(int id)
+        public async Task<IActionResult> Remove(BrandRemoveCommand command)
         {
-            
+            var response = await mediator.Send(command);
            
-            var entity = _db.Brands.FirstOrDefault(b => b.Id == id && b.DeletedDate == null);
-            if (entity == null)
+            if (response.Error)
             {
-                var response = new
-                {
-                    error = true,
-                    message = "Qeyd tapilmadi"
-                };
                 return Json(response);
             }
-
-            entity.DeletedDate = DateTime.UtcNow.AddHours(4);
-            _db.SaveChanges();
-            var data = _db.Brands.Where(b => b.DeletedDate == null).ToList();
+            var data = await mediator.Send(new BrandsAllQuery());
 
             return PartialView("_ListBody",data);
         }
